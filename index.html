@@ -1,0 +1,48 @@
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="build.css">
+</head>
+<body>
+
+
+<div class="flex justify-center bg-[#ffffff] items-center w-[100%] h-[100vh] relative transition-colors delay-200 dark:bg-[#0d1222]">
+    <div id="sw" class="w-[50px] h-[50px] dark:bg-[#fff173] ring-4 transition-all delay-200 dark:ring-[#ffcd42] rounded-full absolute left-5 top-5 bg-[#191f42] ring-[#243aa8]"></div>
+    <div class="bg-[#eeeedc] w-3/4 h-[85%] rounded-2xl  shadow-lg flex justify-center items-center p-5 font-medium transition-all delay-200 leading-relaxed text-xl dark:bg-gray-600 dark:shadow-slate-700 dark:text-slate-200">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt delectus iure odit ea itaque laboriosam quisquam placeat dignissimos quas, corrupti deleniti impedit, nulla modi, ex recusandae illum molestiae. Eum, autem!
+        Lorem ipsum door sit, amet consectetur adipisicing elit. Explicabo, est molestias quia sed facere enim expedita ipsam, rerum nobis nostrum aut. Ad magni neque modi vel dolores. Ducimus, aperiam expedita.
+        Lorem ipsum dollor sit amet, consectetur adipisicing elit. Libero commodi ipsa distinctio placeat quod expedita laboriosam aliquam totam adipisci esse laborum asperiores quos facere alias fuga hic, eaque tenetur ipsam.
+    </div>
+</div>
+
+
+
+<script>
+    const sw = document.getElementById('sw');
+    isdark = false;
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+  isdark = true;
+} else {
+  document.documentElement.classList.remove('dark');
+  isdark = false;
+
+};
+    sw.addEventListener('click',()=>{
+        if(isdark){
+            document.documentElement.classList.remove('dark')
+
+        }else{
+            document.documentElement.classList.add('dark')
+
+        }            isdark = !isdark
+    })
+</script>
+</body>
+    
+
+</html>
+
+
